@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <div class="input-group">
+        <label for="celsius">องศาเซลเซียส (°C)</label>
+        <input
+          type="number"
+          id="celsius"
+          placeholder="ป้อนค่า"
+          oninput="convertCelsius()"
+        />
+      </div>
+      <div class="input-group">
+        <label for="fahrenheit">องศาฟาเรนไฮต์ (°F)</label>
+        <input
+          type="number"
+          id="celsius"
+          placeholder="ป้อนค่า"
+          oninput="convertFahrenheit()"
+        />
+      </div>
+      <div class="result">
+        <p>สูตร: °F = (°C × 9/5) + 32</p>
+      </div>
+    </div>
+  </body>
+</html>
