@@ -57,5 +57,27 @@
       <button onclick="decrease()">- ลด</button>
       <button onclick="increase()">+ เพิ่ม</button>
     </div>
+
+    <script>
+      //ตัวแปรเก็บค่าตัวนับ
+      let count = 0;
+
+      //ฟังก์ชันเพิ่มค่า
+      function increase() {
+        count = count + 1;
+        updateDisplay();
+      }
+
+      //ฟังก์ชันลดค่า
+      function decrease() {
+        count = count - 1;
+        updateDisplay();
+      }
+
+      //ฟังก์ชันอัปเดตการแสดงผลบนหน้าจอ
+      function updateDisplay() {
+        document.getElementById("display").textContent = count;
+      }
+    </script>
   </body>
 </html>
