@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roller - ทอยลูกเต๋า</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #9b59b6;
+      }
+      .container {
+        text-align: center;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        color: #333;
+      }
+      .dice-display {
+        font-size: 80px;
+        font-weight: bold;
+        color: #e74c3c;
+        margin: 30px 0;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        font-size: 18px;
+        padding: 12px 30px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background: #f39c12;
+        color: white;
+      }
+      button:hover {
+        background: #d68910;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dice Roller</h1>
+      <p>ทอยลูกเต๋า</p>
+      <div class="dice-display" id="diceResult">🎲🎲🎲</div>
+      <div id="total">ผลรวม</div>
+      <br />
+      <button onclick="rollDice()">ทอยลูกเต๋า</button>
+    </div>
+
+    <script>
+      //ฟังก์ชันทอยลูกเต๋า
+      function rollDice() {
+        //สุ่มเลข 1 - 6
+        const result01 = Math.floor(Math.random() * 6) + 1;
+        const result02 = Math.floor(Math.random() * 6) + 1;
+        const result03 = Math.floor(Math.random() * 6) + 1;
+        const text =
+          result01.toString() +
+          " " +
+          result02.toString() +
+          " " +
+          result03.toString();
+        const total = result01 + result02 + result03;
+        document.getElementById("diceResult").textContent = text;
+        document.getElementById("total").innerText = "ผลรวม = " + total;
+      }
+    </script>
+  </body>
+</html>
